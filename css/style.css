@@ -37,12 +37,44 @@ a {
   color: inherit;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #wrap {
   position: relative;
 }
 
 .mobile-only {
   display: none !important;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#loading.on {
+  display: flex !important;
+}
+#loading .loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
 }
 
 #side-nav {
@@ -69,6 +101,12 @@ a {
 }
 #side-nav .side-nav-inner li:not(:first-child) {
   margin-top: 0.5em;
+}
+#side-nav .side-nav-inner li.on {
+  border-bottom: 1px solid #0a35f7;
+}
+#side-nav .side-nav-inner li.on p {
+  color: #0a35f7;
 }
 #side-nav .side-nav-contact {
   position: absolute;
@@ -368,6 +406,12 @@ a {
   #side-nav .side-nav-inner > li:not(:first-child) {
     margin-top: 0;
   }
+  #side-nav .side-nav-inner li.on {
+    border: none;
+  }
+  #side-nav .side-nav-inner li.on a {
+    color: #0a35f7;
+  }
   #side-nav .side-nav-contact {
     display: none;
   }
@@ -380,7 +424,7 @@ a {
     padding: 4em 1.25em;
   }
   .each-sc .sc-title {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
   #main-top > div {
     font-size: 2.75em;

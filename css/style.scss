@@ -40,6 +40,13 @@ a {
   color: inherit;
 }
 
+// 로딩 애니메이션
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 // 본
 
 #wrap {
@@ -48,6 +55,32 @@ a {
 
 .mobile-only {
   display: none !important;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &.on {
+    display: flex !important;
+  }
+
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+  }
 }
 
 // 사이드 네비게이션
@@ -78,6 +111,13 @@ a {
 
     li:not(:first-child) {
       margin-top: 0.5em;
+    }
+
+    li.on {
+      border-bottom: 1px solid #0a35f7;
+      p {
+        color: #0a35f7;
+      }
     }
   }
 
@@ -468,6 +508,14 @@ a {
       &>li:not(:first-child) {
         margin-top: 0;
       }
+
+      li.on {
+        border: none;
+
+        a {
+          color: #0a35f7;
+        }
+      }
     }
 
     .side-nav-contact {
@@ -484,7 +532,7 @@ a {
   .each-sc {
     padding: 4em 1.25em;
     .sc-title {
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
     }
   }
 
