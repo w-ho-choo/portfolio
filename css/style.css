@@ -314,8 +314,10 @@ a {
   gap: 0 1.125em;
   margin-top: 0.875em;
 }
-#work .work-wr .work-inner-wr .work-inner-btm .work-scription .work-scription-etc .work-use-thing .use-thing-wr i {
-  font-size: 2.5em;
+#work .work-wr .work-inner-wr .work-inner-btm .work-scription .work-scription-etc .work-use-thing .use-thing-wr .use-icons-img {
+  width: 2.5em;
+  height: 2.5em;
+  object-fit: cover;
 }
 #work .work-wr .work-inner-wr .work-inner-btm .work-scription .work-scription-etc .work-link-btn {
   text-align: left;
