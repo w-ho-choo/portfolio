@@ -9,6 +9,7 @@ export const WorkDetailWrap = styled.section`
 
   @media all and (max-width: 768px) {
     padding: 120px 0;
+    height: auto;
   }
 `
 
