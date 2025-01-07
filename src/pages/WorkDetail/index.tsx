@@ -15,6 +15,7 @@ import {
 } from './style'
 import { SectionContentBox } from '@components/style'
 import { stackList } from '@data/stackList'
+import { useEffect } from 'react'
 
 const WorkDetail = () => {
   const { id } = useParams()
@@ -23,6 +24,10 @@ const WorkDetail = () => {
   const images = CURRENT_DATA?.images?.length
     ? CURRENT_DATA.images
     : CURRENT_DATA?.thumbnails || []
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
 
   return (
     <WorkDetailWrap>
