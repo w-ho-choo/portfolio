@@ -109,6 +109,6 @@ export const data: WorkData[] = [
       CatchMi7,
     ],
     isOnCompany: false,
-    url: '',
+    url: 'http://catchmi-web-page.s3-website.ap-northeast-2.amazonaws.com/',
   },
 ]
