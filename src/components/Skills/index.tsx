@@ -65,6 +65,7 @@ const Skills = () => {
               <SkillListStack>jQuery</SkillListStack>
               <SkillListStack>React</SkillListStack>
               <SkillListStack>TypeScript</SkillListStack>
+              <SkillListStack>Next.Js</SkillListStack>
             </li>
           </SkillList>
           <SkillListText>
@@ -79,7 +80,7 @@ const Skills = () => {
               <br />
               현재는 더욱 나아가 개인학습과 수업을 통하여
               <br />
-              React, TypeScript 등등 을 학습하며 프론트엔드
+              React, TypeScript 등을 학습하며 프론트엔드
               <br />
               개발자를 목표로 열심히 노력하고 있습니다.
             </motion.p>

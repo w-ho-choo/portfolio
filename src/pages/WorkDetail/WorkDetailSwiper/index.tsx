@@ -15,7 +15,7 @@ const WorkDetailSwiper = ({ images }: PropsImages) => {
     <Swiper
       modules={[Pagination, Autoplay]}
       pagination={{ clickable: true }}
-      autoplay={true}
+      autoplay={false}
       loop={true}
     >
       {Array.isArray(images) ? (
